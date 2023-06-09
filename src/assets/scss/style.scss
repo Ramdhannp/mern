@@ -50,3 +50,50 @@
 // Utilities
 @import "utilities/api";
 // scss-docs-end import-stack
+
+.brand-text-icon{
+
+    font-size: 26px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    color: $primary;
+    text-decoration: none;
+
+    &:hover{
+        color: $primary;
+    }
+}
+
+header{
+    border-bottom: 1px solid rgb(219, 219, 219);
+    width: 100%;
+    position: relative;
+    
+    
+    .navbar{
+        height: 80px;
+        
+        .navbar-nav{
+            li.nav-item{
+                &.active{
+                    a.nav-link{
+                        color: $primary;
+                    }
+                }
+                a{
+                    letter-spacing: 1px;
+                    font-weight: 500;
+                    text-decoration: none;
+                    &.nav-link{ // memilih a yang mempunyai class nav-link
+                        color: gray;
+                        padding-left: 1rem;
+                        padding-right: 1rem;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

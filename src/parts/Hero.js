@@ -8,12 +8,16 @@ import Button from "elements/Button";
 import formatNumber from "utils/formatNumber";
 
 export default function Hero(props) {
-  function showMostPicked() {
+  const showMostPicked = () => {
     window.scrollTo({
       top: props.refMostPicked.current.offsetTop - 30,
       behavior: "smooth",
     });
-  }
+    // props.refMostPicked.current.scrollIntoView({
+    //   behavior: "smooth",
+    //   block: "start",
+    // });
+  };
 
   return (
     <section>
@@ -35,7 +39,7 @@ export default function Hero(props) {
               className="btn px-5"
               hasShadow
               isPrimary
-              onclick={showMostPicked}
+              onClick={showMostPicked}
             >
               Show Me Now
             </Button>
